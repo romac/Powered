@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Tx_Powered_Utility_CacheProvider</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Tx_Powered_Utility_CacheProvider</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class Tx_Powered_Utility_CacheProvider.</p>
+<p class="description"><p>Description for class Tx_Powered_Utility_CacheProvider.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Id$</li>
+				<li><span class="field">todo:</span> Refactorize this class.</li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License version 2</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Classes---Utility---CacheProvider.php.html">/Classes/Utility/CacheProvider.php</a> (line <span class="field">47</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CACHE_ENABLED" title="details" class="const-name">CACHE_ENABLED</a> = 					<span class="var-type"> true</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CLEAR_CACHE_FUNCTION_NAME" title="details" class="const-name">CLEAR_CACHE_FUNCTION_NAME</a> = 					<span class="var-type"> 'user_Tx_Powered_Utility_CacheProvied_clearCache'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$cacheConfigurationsHolder" title="details" class="var-name">$cacheConfigurationsHolder</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string[]</span>
+					<a href="#$cacheDirectories" title="details" class="var-name">$cacheDirectories</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">t3lib_cache_Factory</span>
+					<a href="#$cacheFactory" title="details" class="var-name">$cacheFactory</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string[]</span>
+					<a href="#$cacheIdentifiers" title="details" class="var-name">$cacheIdentifiers</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">Tx_Powered_Utility_CacheProvider</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Powered/Tx_Powered_Utility_CacheProvider.html">Tx_Powered_Utility_CacheProvider</a></span>
+										<a href="#addCacheIdentifier" title="details" class="method-name">addCacheIdentifier</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#buildCacheDirectoriesIndex" title="details" class="method-name">buildCacheDirectoriesIndex</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#clearCache" title="details" class="method-name">clearCache</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$params</span>, <span class="var-type">&array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">t3lib_cache_frontend_FrontendInterface</span>
+										<a href="#createCache" title="details" class="method-name">createCache</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$frontendName</span> = <span class="var-default">'t3lib_cache_frontend_VariableFrontend'</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCacheBackend" title="details" class="method-name">getCacheBackend</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getCacheConfiguration" title="details" class="method-name">getCacheConfiguration</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCacheDirectory" title="details" class="method-name">getCacheDirectory</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string[]</span>
+										<a href="#getCacheIdentifiers" title="details" class="method-name">getCacheIdentifiers</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getCacheOptions" title="details" class="method-name">getCacheOptions</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$cacheConfigurationsHolder" id="$cacheConfigurationsHolder"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$cacheConfigurationsHolder</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache configurations holder.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$cacheDirectories" id="$cacheDirectories"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string[]</span>
+			<span class="var-name">$cacheDirectories</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache directories to clear.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$cacheFactory" id="$cacheFactory"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">t3lib_cache_Factory</span>
+			<span class="var-name">$cacheFactory</span>
+			 = <span class="var-default"> NULL</span>			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache factory</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$cacheIdentifiers" id="$cacheIdentifiers"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string[]</span>
+			<span class="var-name">$cacheIdentifiers</span>
+			 = <span class="var-default">array(<br />        'Tx_Powered',<br />        'Tx_Extbase_Reflection'<br />    )</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Cache identifiers.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">96</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructs a new CacheProvider object.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Tx_Powered_Utility_CacheProvider</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodaddCacheIdentifier" id="addCacheIdentifier"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addCacheIdentifier</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a cache identifier</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> This instance.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Powered/Tx_Powered_Utility_CacheProvider.html">Tx_Powered_Utility_CacheProvider</a></span>
+		<span class="method-name">
+			addCacheIdentifier
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbuildCacheDirectoriesIndex" id="buildCacheDirectoriesIndex"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">buildCacheDirectoriesIndex</span> (line <span class="line-number">257</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Build the cache directories index.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			buildCacheDirectoriesIndex
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearCache" id="clearCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearCache</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Clear the cache.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> TRUE if the cache has successfully been cleared, false otherwise.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			clearCache
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$params</span>, <span class="var-type">&array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">&array</span>
+				<span class="var-name">$params</span><span class="var-description">: The parameters.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$params</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateCache" id="createCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">createCache</span> (line <span class="line-number">178</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a new cache.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The cache frontend.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">see:</span> t3lib_cache_Factory::create()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">t3lib_cache_frontend_FrontendInterface</span>
+		<span class="method-name">
+			createCache
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$frontendName</span> = <span class="var-default">'t3lib_cache_frontend_VariableFrontend'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$frontendName</span><span class="var-description">: The class name of the cache frontend.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCacheBackend" id="getCacheBackend"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCacheBackend</span> (line <span class="line-number">216</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the cache backend's name by its cache identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The name of the cache backend.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCacheBackend
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCacheConfiguration" id="getCacheConfiguration"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCacheConfiguration</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the configuration for the supplied cache identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The cache configuration array.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">throws:</span> Tx_Powered_Exception_NoSuchCacheIdentifier If no valid registered cache identifier found.</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCacheConfiguration
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCacheDirectory" id="getCacheDirectory"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCacheDirectory</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the cache directory by its cache identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The relative path to the cache directory.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCacheDirectory
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCacheIdentifiers" id="getCacheIdentifiers"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCacheIdentifiers</span> (line <span class="line-number">129</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the register cache identifiers.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The cache identifiers.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string[]</span>
+		<span class="method-name">
+			getCacheIdentifiers
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCacheOptions" id="getCacheOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCacheOptions</span> (line <span class="line-number">230</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the cache options by them cache identifier.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The options.</li>
+				<li><span class="field">author:</span> Romain Ruetschi &lt;<a href="mailto:romain@kryzalid.com">romain@kryzalid.com</a>&gt;</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCacheOptions
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$cacheIdentifier</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$cacheIdentifier</span><span class="var-description">: The cache identifier.</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constCACHE_ENABLED" id="CACHE_ENABLED"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CACHE_ENABLED</span>
+			 = <span class="const-default"> true</span>
+			(line <span class="line-number">53</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is the cache enabled ?</p>
+	
+	
+</div>
+<a name="constCLEAR_CACHE_FUNCTION_NAME" id="CLEAR_CACHE_FUNCTION_NAME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CLEAR_CACHE_FUNCTION_NAME</span>
+			 = <span class="const-default"> 'user_Tx_Powered_Utility_CacheProvied_clearCache'</span>
+			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of the function which will be invoked by the TCE to clear the cache.</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 30 Jun 2009 20:52:21 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>
