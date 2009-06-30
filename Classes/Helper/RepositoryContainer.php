@@ -121,13 +121,13 @@ class Tx_Powered_Helper_RepositoryContainer
             
             $replacements = array(
                 '@extension' => $this->controllerContext->getRequest()->getControllerExtensionName(),
-                '@entity'    => ucfirst( $entity )
+                '@entity'    => ucfirst( $entityName )
             );
             
             $repositoryClassName = str_replace(
                 array_keys( $replacements ),
                 array_values( $replacements ),
-                $this->repositoryClassPattern
+                $this->repositoryClassNamePattern
             );
             
             if( !class_exists( $repositoryClassName ) ) {

@@ -48,39 +48,15 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
 {
     
     /**
-     * Debug mode enabled ?
-     * 
-     * @todo Remove when production ready.
-     */
-    const DEBUG_MODE = true;
-    
-    /**
      * A repository container.
      *
      * @var Tx_Powered_Helper_RepositoryContainer
      */
     protected $repositoryContainer = NULL;
     
-    /**
-     * Constructs a new controller.
-     * 
-     * This method calls the initalization methods needed and check for a debug mode.
-     * 
-     * @todo   Remove the debug part when production ready.
-     * @author Romain Ruetschi <romain@kryzalid.com>
-     */
-    public function __construct()
+    public function initializeAction()
     {
-        parent::__construct();
-        
         $this->initializeHelpers();
-        
-        if( self::DEBUG ) {
-            
-            require_once(
-                t3lib_extMgm::extPath( 'api_macmade' ) . 'class.tx_apimacmade.php'
-            );
-        }
     }
     
     /**
@@ -93,7 +69,8 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
     {
         // Get a repository container.
         $this->repositoryContainer = t3lib_div::makeInstance(
-            'Tx_Powered_Helper_RepositoryContainer'
+            'Tx_Powered_Helper_RepositoryContainer',
+            $this->buildControllerContext()
         );
     }
     
@@ -106,12 +83,36 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
      */
     protected function initializeView( Tx_Extbase_MVC_View_ViewInterface $view )
     {
-        parent::initializeView();
+        parent::initializeView( $view );
         
         $this->view = t3lib_div::makeInstance(
-            'Tx_Powered_View_ViewAdapter',
+            'Tx_Powered_MVC_View_ViewAdapter',
             $view
         );
+    }
+    
+    /**
+     * Allows to retrieve a repository by just asking for:
+     * $this->[entityName]Repository.
+     *
+     * @param string $propertyName The name of the getted property.
+     * @return mixed
+     * @author Romain Ruetschi <romain@kryzalid.com>
+     */
+    public function __get( $propertyName )
+    {
+        debug( __METHOD__ );
+        // If the asked property's name ends with "Repository".
+        if( substr( $propertyName, -10 ) === 'Repository' ) {
+            
+            // Assign a repository to the property.
+            $this->$propertyName = $this->repositoryContainer->getRepository(
+                substr( $propertyName, 0, -10 )
+            );
+        }
+        
+        // Return it.
+        return $this->$propertyName;
     }
     
 }
