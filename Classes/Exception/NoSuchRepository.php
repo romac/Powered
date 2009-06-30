@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @see        Tx_Powered_Exception_NoSuchRepository
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  */
 class Tx_Powered_Exception_NoSuchRepository extends Tx_Powered_Exception

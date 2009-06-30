@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_View_ViewAdapter
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  */
 class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterface, Tx_Extbase_MVC_View_ViewInterface
@@ -57,7 +57,7 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
      * Construct a new ViewAdapter.
      *
      * @param Tx_Extbase_MVC_View_ViewInterface $view The View object to adapt.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function __construct( Tx_Extbase_MVC_View_ViewInterface $view )
     {
@@ -71,7 +71,7 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
      * @param  string $name  The name of the variable.
      * @param  string $value The value of the variable.
      * @return void
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function __set( $name, $value )
     {

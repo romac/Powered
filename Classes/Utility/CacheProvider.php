@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @see        Tx_Powered_Utility_CacheProvider
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @todo       Refactorize this class.
  */
@@ -91,7 +91,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     /**
      * Constructs a new CacheProvider object.
      *
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function __construct()
     {
@@ -106,7 +106,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param string $cacheIdentifier The cache identifier
      * @return Tx_Powered_Utility_CacheProvider This instance.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function addCacheIdentifier( $cacheIdentifier )
     {
@@ -124,7 +124,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      * Get the register cache identifiers.
      *
      * @return string[] The cache identifiers.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function getCacheIdentifiers()
     {
@@ -136,7 +136,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param &array $params The parameters.
      * @return boolean TRUE if the cache has successfully been cleared, false otherwise.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function clearCache( &$params )
     {
@@ -173,7 +173,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      * @param  string $frontendName The class name of the cache frontend.
      * @return t3lib_cache_frontend_FrontendInterface The cache frontend.
      * @see    t3lib_cache_Factory::create()
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function createCache( $cacheIdentifier, $frontendName = 't3lib_cache_frontend_VariableFrontend' )
     {
@@ -190,7 +190,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param string $cacheIdentifier The cache identifier.
      * @return array The cache configuration array.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      * @throws Tx_Powered_Exception_NoSuchCacheIdentifier If no valid registered cache identifier found.
      */
     protected function getCacheConfiguration( $cacheIdentifier )
@@ -211,7 +211,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param string $cacheIdentifier The cache identifier.
      * @return string The name of the cache backend.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function getCacheBackend( $cacheIdentifier )
     {
@@ -225,7 +225,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param string $cacheIdentifier The cache identifier.
      * @return array The options.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function getCacheOptions( $cacheIdentifier )
     {
@@ -239,7 +239,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      *
      * @param  string $cacheIdentifier The cache identifier.
      * @return string The relative path to the cache directory.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function getCacheDirectory( $cacheIdentifier )
     {
@@ -252,7 +252,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
      * Build the cache directories index.
      *
      * @return void
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function buildCacheDirectoriesIndex()
     {

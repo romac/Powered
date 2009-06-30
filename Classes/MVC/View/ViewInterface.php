@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_View_ViewInterface
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  */
 interface Tx_Powered_MVC_View_ViewInterface
@@ -53,7 +53,7 @@ interface Tx_Powered_MVC_View_ViewInterface
      * @param  string $name  The name of the variable.
      * @param  string $value The value of the variable.
      * @return void
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function __set( $name, $value );
     

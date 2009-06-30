@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_Controller_AbstractController
  */
@@ -41,7 +41,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
+ * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  */
 abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_MVC_Controller_ActionController
@@ -67,7 +67,7 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
      * This method calls the initalization methods needed and check for a debug mode.
      * 
      * @todo   Remove the debug part when production ready.
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     public function __construct()
     {
@@ -87,7 +87,7 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
      * Initializes the helpers.
      *
      * @return void
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function initializeHelpers()
     {
@@ -102,7 +102,7 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
      *
      * @param Tx_Extbase_View_ViewInterface $view The view to be initialized
      * @return void
-     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     * @author Romain Ruetschi <romain@kryzalid.com>
      */
     protected function initializeView( Tx_Extbase_MVC_View_ViewInterface $view )
     {
