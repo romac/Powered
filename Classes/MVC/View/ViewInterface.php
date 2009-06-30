@@ -38,7 +38,6 @@
  * 
  * This interface defines an augmented interface for the View.
  *
- * @interface
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
