@@ -101,7 +101,6 @@ abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_M
      */
     public function __get( $propertyName )
     {
-        debug( __METHOD__ );
         // If the asked property's name ends with "Repository".
         if( substr( $propertyName, -10 ) === 'Repository' ) {
             
