@@ -55,7 +55,7 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     /**
      * The name of the function which will be invoked by the TCE to clear the cache.
      */
-    const CLEAR_CACHE_FUNCTION_NAME     = 'user_Tx_Powered_Utility_CacheProvied_clearCache';
+    const CLEAR_CACHE_FUNCTION_NAME     = 'user_txPoweredUtilityCacheProvider_clearCache';
     
     /**
      * Cache configurations holder.
@@ -277,12 +277,12 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
 }
 
 // If the function 
-if( !function_exists( Tx_Powered_Utility_CacheProvied::CLEAR_CACHE_FUNCTION_NAME ) ) {
+if( !function_exists( Tx_Powered_Utility_CacheProvider::CLEAR_CACHE_FUNCTION_NAME ) ) {
     
-    function user_txPoweredUtilityCacheManager_clearCache( &$params )
+    function user_txPoweredUtilityCacheProvider_clearCache( &$params )
     {
         return t3lib_div::makeInstance(
-            'Tx_Powered_Utility_CacheProvied'
+            'Tx_Powered_Utility_CacheProvider'
         )->clearCache( $params );
     }
 }
