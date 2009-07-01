@@ -33,6 +33,9 @@
  * @see        Tx_Powered_Utility_CacheProvider
  */
 
+require_once( PATH_t3lib . 'interfaces/interface.t3lib_singleton.php' );
+require_once( PATH_t3lib . 'cache/class.t3lib_cache_factory.php' );
+
 /**
  * Class Tx_Powered_Utility_CacheProvider.
  * 
