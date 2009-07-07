@@ -105,11 +105,22 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
             $this->extensionName
         );
         
+        //  Build the extra query string.
+        $extraQueryString = http_build_query(
+            array(
+                'controller' => $this->controllerContext->getRequest()->getControllerName(),
+                'action'     => $this->controllerContext->getRequest()->getControllerActionName()
+            ),
+            $this->getPrefixIdentifier(),
+            '&'
+        );
+        
         // Override them with some predefined ones.
         $this->settings       = t3lib_div::array_merge_recursive_overrule(
             $defaultSettings,
             array(
-                'pageParameterName' => $this->getPageParameterName()
+                'pageParameterName' => $this->getPageParameterName(),
+                'extraQueryString'  => $extraQueryString
             )
         );
         

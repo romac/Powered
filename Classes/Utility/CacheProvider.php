@@ -35,6 +35,7 @@
 
 require_once( PATH_t3lib . 'interfaces/interface.t3lib_singleton.php' );
 require_once( PATH_t3lib . 'cache/class.t3lib_cache_factory.php' );
+require_once( PATH_t3lib . 'cache/class.t3lib_cache_manager.php' );
 
 /**
  * Class Tx_Powered_Utility_CacheProvider.
@@ -85,6 +86,13 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     protected $cacheFactory              = NULL;
     
     /**
+     * Cache manager
+     *
+     * @var t3lib_cache_Manager
+     */
+    protected $cacheManager              = NULL;
+    
+    /**
      * Cache directories to clear.
      *
      * @var string[]
@@ -99,9 +107,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     public function __construct()
     {
         $this->cacheConfigurationsHolder =& $GLOBALS[ 'TYPO3_CONF_VARS' ][ 'SYS' ][ 'caching' ][ 'cacheConfigurations' ];
-        $this->cacheFactory              = t3lib_div::makeInstance(
-            't3lib_cache_Factory'
-        );
+        $this->cacheFactory              = t3lib_div::makeInstance( 't3lib_cache_Factory' );
+        $this->cacheManager              = t3lib_div::makeInstance( 't3lib_cache_Manager' );
     }
     
     /**
@@ -167,6 +174,18 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
         
         // Return the status.
         return ( bool )$status;
+    }
+    
+    /**
+     * Get a cache frontend by its identifier.
+     *
+     * @param string $cacheIdentifier The cache identifier.
+     * @return t3lib_cache_frontend_FrontendInterface The cache frontend.
+     * @author Romain Ruetschi <romain@kryzalid.com>
+     */
+    public function getCache( $cacheIdentifier )
+    {
+        return $this->cacheManager->getCache( $cacheIdentifier );
     }
     
     /**

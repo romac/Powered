@@ -46,7 +46,19 @@
 class Tx_Powered_Persistence_Repository extends Tx_Extbase_Persistence_Repository
 {
     
+    /**
+     * The execution time.
+     *
+     * @var integer
+     */
+    protected $executionTime = 0;
     
+    public function __construct( $aggregateRootClassName = NULL )
+    {
+        parent::__construct( $aggregateRootClassName );
+        
+        $this->executionTime = $GLOBALS[ 'SIM_EXEC_TIME' ];
+    }
     
 }
 
