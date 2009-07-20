@@ -47,27 +47,6 @@ class Tx_Powered_ViewHelpers_Object_CallViewHelper extends Tx_Fluid_Core_ViewHel
 {
     
     /**
-     * The reflection service.
-     *
-     * @var Tx_Extbase_Reflection_Service
-     */
-    protected $reflectionService = NULL;
-    
-    /**
-     * Initialize this view helper.
-     * This method is called before the render() method.
-     *
-     * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
-     */
-    public function initialize()
-    {
-        $this->reflectionService = t3lib_div::makeInstance(
-            'Tx_Extbase_Reflection_Service'
-        );
-    }
-    
-    /**
      * Invoke a method (with arguments) on the given object and returns its output.
      * 
      * @param GenericObject $object The object to invoke the method on.
