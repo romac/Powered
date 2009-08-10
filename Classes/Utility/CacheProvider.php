@@ -298,6 +298,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     
 }
 
+// TODO: Refactor
+
 // If the function 
 if( !function_exists( Tx_Powered_Utility_CacheProvider::CLEAR_CACHE_FUNCTION_NAME ) ) {
     

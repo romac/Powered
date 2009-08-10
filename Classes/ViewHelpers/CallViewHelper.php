@@ -24,26 +24,26 @@
  ***************************************************************/
 
 /**
- * Source file containing class Tx_Powered_ViewHelpers_Object_CallViewHelper.
+ * Source file containing class Tx_Powered_ViewHelpers_CallViewHelper.
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
- * @see        Tx_Powered_ViewHelpers_Object_CallViewHelper
+ * @see        Tx_Powered_ViewHelpers_CallViewHelper
  */
 
 /**
- * Class Tx_Powered_ViewHelpers_Object_CallViewHelper.
+ * Class Tx_Powered_ViewHelpers_CallViewHelper.
  * 
- * Description for class Tx_Powered_ViewHelpers_Object_CallViewHelper.
+ * Description for class Tx_Powered_ViewHelpers_CallViewHelper.
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
-class Tx_Powered_ViewHelpers_Object_CallViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
+class Tx_Powered_ViewHelpers_CallViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
 {
     
     /**

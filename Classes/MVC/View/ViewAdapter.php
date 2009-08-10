@@ -36,7 +36,10 @@
 /**
  * Class Tx_Powered_MVC_View_ViewAdapter.
  * 
- * Description for class Tx_Powered_MVC_View_ViewAdapter.
+ * This class is an adaptator designed to adapt the interface of any class implementing
+ * the standard Extbase view interface to the Powered view interface whithout extending it.
+ * This to allow the use of any view that implements the standard Extbase view interface,
+ * as the Fluid template view does.
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2

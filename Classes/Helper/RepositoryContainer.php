@@ -117,19 +117,25 @@ class Tx_Powered_Helper_RepositoryContainer
      */
     public function getRepository( $entityName )
     {
+        // If there is no already registered repository for the supplied entity's name,
         if( !array_key_exists( $entityName, $this->repositories ) ) {
             
+            // Prepare the replacements.
+            // 1. Replace "@extension" with the extension name.
+            // 2. Replace "@entity" with the "ucfirsted" entity's name.
             $replacements = array(
                 '@extension' => $this->controllerContext->getRequest()->getControllerExtensionName(),
                 '@entity'    => ucfirst( $entityName )
             );
             
+            // Build the repository class name.
             $repositoryClassName = str_replace(
                 array_keys( $replacements ),
                 array_values( $replacements ),
                 $this->repositoryClassNamePattern
             );
             
+            // If the class is not defined (so it does not exists),
             if( !class_exists( $repositoryClassName ) ) {
                 
                 throw new Tx_Powered_Exception_NoSuchRepository(
@@ -137,11 +143,13 @@ class Tx_Powered_Helper_RepositoryContainer
                 );
             }
             
+            // Else, store a reference to the unique instance of the repository
             $this->repositories[ $entityName ] = t3lib_div::makeInstance(
                 $repositoryClassName
             );
         }
         
+        // Return the stored reference.
         return $this->repositories[ $entityName ];
     }
     

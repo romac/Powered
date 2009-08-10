@@ -47,7 +47,7 @@ class Tx_Powered_Persistence_Repository extends Tx_Extbase_Persistence_Repositor
 {
     
     /**
-     * The execution time.
+     * The simulated execution time.
      *
      * @var integer
      */
@@ -57,7 +57,8 @@ class Tx_Powered_Persistence_Repository extends Tx_Extbase_Persistence_Repositor
     {
         parent::__construct( $aggregateRootClassName );
         
-        $this->executionTime = $GLOBALS[ 'SIM_EXEC_TIME' ];
+        // Store the simulated execution time inside the repository for an easier-to-access syntax. 
+        $this->executionTime = &$GLOBALS[ 'SIM_EXEC_TIME' ];
     }
     
 }
