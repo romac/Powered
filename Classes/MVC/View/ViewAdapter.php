@@ -81,6 +81,11 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
         return $this->view->assign( $name, $value );
     }
     
+    public function initializeView()
+    {
+        $this->view->initializeView();
+    }
+    
     /**
      * Sets the current controller context.
      *

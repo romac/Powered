@@ -51,7 +51,7 @@ class Tx_Powered_Helper_RepositoryContainer
      *
      * @var string
      */
-    protected $repositoryClassNamePattern = 'Tx_@extension_Domain_Model_@entityRepository';
+    protected $repositoryClassNamePattern = 'Tx_@extension_Domain_Repository_@entityRepository';
     
     /**
      * The pattern which a magically called method's name must match against.

@@ -29,7 +29,7 @@
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain@kryzalid.com>
- * @version    $Id$
+ * @version    $Id: PageBrowserViewHelper.php 13 2009-07-07 08:33:48Z romac $
  * @see        Tx_Powered_ViewHelpers_PageBrowserViewHelper
  */
 
@@ -43,7 +43,7 @@
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain@kryzalid.com>
- * @version    $Id$
+ * @version    $Id: PageBrowserViewHelper.php 13 2009-07-07 08:33:48Z romac $
  */
 class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
 {
