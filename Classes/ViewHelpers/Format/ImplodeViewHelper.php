@@ -24,26 +24,26 @@
  ***************************************************************/
 
 /**
- * Source file containing class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper.
+ * Source file containing class Tx_Powered_ViewHelpers_Format_    ViewHelper.
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
- * @see        Tx_Powered_ViewHelpers_Format_ImplodeViewHelper
+ * @see        Tx_Powered_ViewHelpers_Format_    ViewHelper
  */
 
 /**
- * Class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper.
+ * Class Tx_Powered_ViewHelpers_Format_    ViewHelper.
  * 
- * Description for class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper.
+ * Description for class Tx_Powered_ViewHelpers_Format_    ViewHelper.
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
-class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
+class Tx_Powered_ViewHelpers_Format_    ViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
 {
     
     /**
@@ -73,7 +73,7 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
     }
     
     /**
-     * Implode the given array with the specified glue.
+     *      the given array with the specified glue.
      * If a property is supplied, the array's values's property's values
      * will be imploded.
      * 
@@ -136,6 +136,6 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
 /**
  * XCLASS inclusion
  */
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/powered/Classes/ViewHelpers/Format/ImplodeViewHelper.php']) {
-    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/powered/Classes/ViewHelpers/Format/ImplodeViewHelper.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/powered/Classes/ViewHelpers/Format/    ViewHelper.php']) {
+    include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/powered/Classes/ViewHelpers/Format/    ViewHelper.php']);
 }

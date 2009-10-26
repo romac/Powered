@@ -107,6 +107,58 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
         return $this->view->render();
     }
     
+    /**
+     * Call a method on the wrapped view.
+     *
+     * @param string $methodName The name of the method to call.
+     * @param array $arguments The arguments to supply to the method.
+     * @return void
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
+     */
+    public function &__call( $methodName, array $arguments = array() )
+    {
+        // Checks for constructor arguments
+        switch( count( $arguments ) ) {
+            
+            case 0:
+                
+                // Return an instance of the class
+                return $this->$methodName();
+            
+            case 1:
+                
+                // Return an instance of the class
+                return $this->$methodName( $arguments[ 0 ] );
+            
+            case 2:
+                
+                // Return an instance of the class
+                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ] );
+            
+            case 3:
+                
+                // Return an instance of the class
+                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ] );
+            
+            case 4:
+                
+                // Return an instance of the class
+                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ] );
+            
+            case 5:
+                
+                // Return an instance of the class
+                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ], $arguments[ 4 ] );
+            
+            default:
+            
+                throw new Tx_Powered_Exception(
+                    'Calling a method with more than 5 arguments is a bad idea.' .
+                    'Therefore this feature is currently disabled.'
+                );
+        }
+    }
+    
 }
 
 /**
