@@ -1,0 +1,4 @@
+Powered
+=======
+
+Powered is a TYPO3 extension which adds functionalities to the Extbase MVC framework shipped with TYPO3 since version 4.3.
