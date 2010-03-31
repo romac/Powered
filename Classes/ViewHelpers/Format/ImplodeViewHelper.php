@@ -84,16 +84,9 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
      */
     public function render( $array, $glue = ', ', $property = NULL )
     {
-        if( is_object( $array ) ) {
-            
-            $array = $array->toArray();
-        }
-        
         if( !is_array( $array ) ) {
             
-            throw new Tx_Powered_Exception(
-                'You must supply an array or an Iterator instance to p:format.implode view helper.'
-            );
+            $array = $this->convertObjectToArray( $array );
         }
         
         if( is_string( $property ) && !empty( $property ) ) {
@@ -129,6 +122,23 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
         }
         
         return $current;
+    }
+    
+    protected function convertObjectToArray( $array )
+    {
+        if( method_exists( $array, 'toArray' ) ) {
+            
+            return $array->toArray();
+        }
+        
+        if( $array instanceof Iterator ) {
+            
+            return $array;
+        }
+        
+        throw new Tx_Powered_Exception(
+            'You must supply an array or an Iterator instance to p:format.implode view helper.'
+        );
     }
     
 }
