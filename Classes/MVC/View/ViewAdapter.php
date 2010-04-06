@@ -123,32 +123,32 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
             case 0:
                 
                 // Return an instance of the class
-                return $this->$methodName();
+                return $this->view->$methodName();
             
             case 1:
                 
                 // Return an instance of the class
-                return $this->$methodName( $arguments[ 0 ] );
+                return $this->view->$methodName( $arguments[ 0 ] );
             
             case 2:
                 
                 // Return an instance of the class
-                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ] );
+                return $this->view->$methodName( $arguments[ 0 ], $arguments[ 1 ] );
             
             case 3:
                 
                 // Return an instance of the class
-                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ] );
+                return $this->view->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ] );
             
             case 4:
                 
                 // Return an instance of the class
-                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ] );
+                return $this->view->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ] );
             
             case 5:
                 
                 // Return an instance of the class
-                return $this->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ], $arguments[ 4 ] );
+                return $this->view->$methodName( $arguments[ 0 ], $arguments[ 1 ], $arguments[ 2 ], $arguments[ 3 ], $arguments[ 4 ] );
             
             default:
             

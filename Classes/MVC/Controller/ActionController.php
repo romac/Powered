@@ -24,17 +24,17 @@
  ***************************************************************/
 
 /**
- * Source file containing class Tx_Powered_MVC_Controller_AbstractController.
+ * Source file containing class Tx_Powered_MVC_Controller_ActionController.
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
  * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
- * @see        Tx_Powered_MVC_Controller_AbstractController
+ * @see        Tx_Powered_MVC_Controller_ActionController
  */
 
 /**
- * Class Tx_Powered_MVC_Controller_AbstractController.
+ * Class Tx_Powered_MVC_Controller_ActionController.
  * 
  * Provides an abstract controller augmented with a repository container which
  * can be used to easily retrieve a repository.
@@ -44,7 +44,7 @@
  * @author     Romain Ruetschi <romain@kryzalid.com>
  * @version    $Id$
  */
-abstract class Tx_Powered_MVC_Controller_AbstractController extends Tx_Extbase_MVC_Controller_ActionController
+abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC_Controller_ActionController
 {
     
     /**

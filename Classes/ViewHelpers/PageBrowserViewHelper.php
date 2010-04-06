@@ -95,15 +95,7 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
         // First call the parent class's "initialize" method.
         parent::initialize();
         
-        // Get the configuration manager.
-        $configurationManager = t3lib_div::makeInstance(
-            'Tx_Extbase_Configuration_Manager'
-        );
-        
-        // Get the default settings from the extension.
-        $defaultSettings      = $configurationManager->getSettings(
-            $this->extensionName
-        );
+        $defaultSettings = $GLOBALS[ 'TSFE' ]->tmpl->setup[ 'plugin.' ][ 'tx_pagebrowse_pi1.' ];
         
         //  Build the extra query string.
         $extraQueryString = http_build_query(

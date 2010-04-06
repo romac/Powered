@@ -118,7 +118,7 @@ class Tx_Powered_Helper_RepositoryContainer
     public function getRepository( $entityName )
     {
         // If there is no already registered repository for the supplied entity's name,
-        if( !array_key_exists( $entityName, $this->repositories ) ) {
+        if( !isset( $this->repositories[ $entityName ] ) ) {
             
             // Prepare the replacements.
             // 1. Replace "@extension" with the extension name.
