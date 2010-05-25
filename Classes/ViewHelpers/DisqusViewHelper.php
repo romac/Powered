@@ -48,18 +48,25 @@ class Tx_Powered_ViewHelpers_DisqusViewHelper extends Tx_Fluid_Core_ViewHelper_A
      * Render the Disqus comment box.
      *
      * @param string $site The name of the site registered in Disqus (alphanumeric and hyphens only.)
+     * @param string $identifier A unique identifier for the thread.
      * @param array $options An array of options that'll be rendered as global variables prefixed with disqus_.
      * @return string The Disqus comment box.
      * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
-    public function render( $site, array $options = array() )
+    public function render( $site, $identifier = '', array $options = array() )
     {
+        if( $identifier ) {
+            
+            $options[ 'identifier' ] = '\'' . addslashes( $identifier ) . '\'';
+        }
+        
         $content   = array();
         $content[] = '<div id="disqus_thread"></div>';
         $content[] = $this->renderOptions( $options );
         $content[] = '<script type="text/javascript">';
         $content[] = '// <![CDATA[';
         $content[] = '';
+            
         $content[] = '( function()';
         $content[] = '{';
         $content[] = '    var dsq       = document.createElement( \'script\' );';
