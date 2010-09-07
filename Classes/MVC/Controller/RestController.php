@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_Controller_RestController
  */
@@ -42,7 +42,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
 abstract class Tx_Powered_MVC_Controller_RestController extends Tx_Extbase_MVC_Controller_ActionController

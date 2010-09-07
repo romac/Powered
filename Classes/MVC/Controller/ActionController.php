@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_Controller_ActionController
  */
@@ -41,7 +41,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
 abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC_Controller_ActionController
@@ -123,7 +123,7 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
      * Initializes the helpers.
      *
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     protected function initializeHelpers()
     {
@@ -139,7 +139,7 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
      *
      * @param Tx_Extbase_View_ViewInterface $view The view to be initialized
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     protected function initializeView( Tx_Extbase_MVC_View_ViewInterface $view )
     {
@@ -243,7 +243,7 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
      *
      * @param string $propertyName The name of the getted property.
      * @return mixed
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function __get( $propertyName )
     {

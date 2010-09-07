@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -51,7 +51,7 @@ class Tx_Powered_ViewHelpers_Object_CallViewHelper extends Tx_Fluid_Core_ViewHel
      * This method is called before the render() method.
      *
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function initialize()
     {
@@ -65,7 +65,7 @@ class Tx_Powered_ViewHelpers_Object_CallViewHelper extends Tx_Fluid_Core_ViewHel
      * @param  string The name of the method to call.
      * @param  array  An array of arguments to supply to the method.
      * @return string The output of the method's invocation.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function render( $object, $method, array $arguments = array() )
     {

@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @see        Tx_Powered_ViewHelpers_SocialSharingViewHelper
  */
 
@@ -39,7 +39,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  */
 class Tx_Powered_ViewHelpers_SocialSharingViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
 {
@@ -70,7 +70,7 @@ class Tx_Powered_ViewHelpers_SocialSharingViewHelper extends Tx_Fluid_Core_ViewH
      * This method is called before the render() method.
      *
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function initialize()
     {

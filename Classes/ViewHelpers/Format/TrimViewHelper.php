@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -50,7 +50,7 @@ class Tx_Powered_ViewHelpers_Format_TrimViewHelper extends Tx_Fluid_Core_ViewHel
      * Just calls PHP's internal function: trim
      * 
      * @param string $charlist 
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function render( $charlist = '' )
     {

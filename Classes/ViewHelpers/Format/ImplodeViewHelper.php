@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -65,7 +65,7 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
      * This method is called before the render() method.
      *
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function initialize()
     {
@@ -80,7 +80,7 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
      * @param mixed $array The array to implode
      * @param string $glue The glue to use.
      * @param string $property The property to get on each value.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function render( $array, $glue = ', ', $property = NULL )
     {

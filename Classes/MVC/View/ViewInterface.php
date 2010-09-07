@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  * @see        Tx_Powered_MVC_View_ViewInterface
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
 interface Tx_Powered_MVC_View_ViewInterface
@@ -53,7 +53,7 @@ interface Tx_Powered_MVC_View_ViewInterface
      * @param  string $name  The name of the variable.
      * @param  string $value The value of the variable.
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function __set( $name, $value );
     

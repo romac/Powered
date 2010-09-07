@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  * @see        Tx_Powered_Helper_RepositoryContainer
  */
@@ -40,7 +40,7 @@
  *
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id$
  */
 class Tx_Powered_Helper_RepositoryContainer
@@ -89,7 +89,7 @@ class Tx_Powered_Helper_RepositoryContainer
      * @throws BadMethodCallException If the invoked method does not match
      *                                against the method's name pattern.
      * @see    getRepository()
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function __call( $methodName, $arguments )
     {
@@ -113,7 +113,7 @@ class Tx_Powered_Helper_RepositoryContainer
      * @return Tx_Extbase_Persistence_RepositoryInterface A repository.
      * @throws Tx_Powered_Exception_NoSuchRepository      If the asked repository
      *                                                    can not be found.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function getRepository( $entityName )
     {
@@ -161,7 +161,7 @@ class Tx_Powered_Helper_RepositoryContainer
      * @param string $entityName The name of the entity to retrieve the repository.
      * @return Tx_Extbase_Persistence_RepositoryInterface A repository.
      * @see    getRepository()
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function __get( $entityName )
     {

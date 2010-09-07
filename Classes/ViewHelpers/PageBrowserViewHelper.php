@@ -3,7 +3,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2009 Romain Ruetschi (romain@kryzalid.com)
+ * (c) 2009 Romain Ruetschi (romain.ruetschi@gmail.com)
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is 
@@ -28,7 +28,7 @@
  * 
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id: PageBrowserViewHelper.php 13 2009-07-07 08:33:48Z romac $
  * @see        Tx_Powered_ViewHelpers_PageBrowserViewHelper
  */
@@ -42,7 +42,7 @@
  * @see        http://dmitry-dulepov.com/article/do-you-need-a-page-browser-for-your-typo3-extension.html
  * @package    Powered
  * @license    http://www.gnu.org/copyleft/gpl.html GNU General Public License version 2
- * @author     Romain Ruetschi <romain@kryzalid.com>
+ * @author     Romain Ruetschi <romain.ruetschi@gmail.com>
  * @version    $Id: PageBrowserViewHelper.php 13 2009-07-07 08:33:48Z romac $
  */
 class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper
@@ -88,7 +88,7 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
      * This method is called before the render() method.
      *
      * @return void
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function initialize()
     {
@@ -129,7 +129,7 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
      * @param integer $numberOfPages The number of pages to show.
      * @param array $settings The settings which override the default one.
      * @return string The HTML page browser.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     public function render( $numberOfPages, array $settings = array() )
     {
@@ -157,7 +157,7 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
      * The result is converted to lowercase.
      * 
      * @return string The prefix identifier.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     protected function getPrefixIdentifier()
     {
@@ -183,7 +183,7 @@ class Tx_Powered_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core_ViewHel
      * 
      * @see getPrefixIdentifier()
      * @return string The page parameter name.
-     * @author Romain Ruetschi <romain@kryzalid.com>
+     * @author Romain Ruetschi <romain.ruetschi@gmail.com>
      */
     protected function getPageParameterName()
     {
