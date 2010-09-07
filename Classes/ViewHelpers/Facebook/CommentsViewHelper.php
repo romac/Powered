@@ -50,9 +50,10 @@ class Tx_Powered_ViewHelpers_Facebook_CommentsViewHelper extends Tx_Fluid_Core_V
      * @param string $identifier A unique identifier for the thread.
      * @param integer $numberOfPosts The number of comments to show.
      * @param integer $width The width of the comment box.
+     * @param string $url The page URL
      * @return string The Facebook comment box.
      */
-    public function render( $identifier = '', $numberOfPosts = 10, $width = 550 )
+    public function render( $identifier = '', $numberOfPosts = 10, $width = 550, $url = '' )
     {
         $arguments = array();
         
@@ -71,30 +72,14 @@ class Tx_Powered_ViewHelpers_Facebook_CommentsViewHelper extends Tx_Fluid_Core_V
             $arguments[ 'width' ]    = $width;
         }
         
+        if( $url )
+        {
+            $arguments[ 'url' ]     = str_replace( '/no_cache', '', urldecode( $url ) );
+        }
+        
         $attributes = ( $arguments ) ? $this->renderArguments( $arguments ) : '';
         
-        $html = '<script type="text/javascript">'
-              . 'window.fbAsyncInit = function()' . "\n"
-              . '{' . "\n"
-              . '    FB.init( {' . "\n"
-              . '        appId  : \'YOUR APP ID\',' . "\n"
-              . '        status : true,' . "\n"
-              . '        cookie : true,' . "\n"
-              . '        xfbml  : true' . "\n"
-              . '    } );' . "\n"
-              . '}' . "\n"
-              . '' . "\n"
-              . '( function()' . "\n"
-              . '{' . "\n"
-              . '    var e   = document.createElement( \'script\' );' . "\n"
-              . '    e.src   = document.location.protocol + \'//connect.facebook.net/fr_FR/all.js\';' . "\n"
-              . '    e.async = true;' . "\n"
-              . '' . "\n"
-              . '    document.body.appendChild( e );' . "\n"
-              . '' . "\n"
-              . '}() );' . "\n"
-              . '</script>' . "\n"
-              . '<fb:comments' . $attributes . '></fb:comments>' . "\n";
+        $html = '<fb:comments' . $attributes . '></fb:comments>' . "\n";
                 
         return $html;
     }
