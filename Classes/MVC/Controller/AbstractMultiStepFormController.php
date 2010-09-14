@@ -65,7 +65,7 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 	 *
 	 * @var array
 	 */
-	protected $formData;
+	protected $formData = NULL;
  
 	/**
 	 * A list of action names that have been passed successfully.
@@ -104,17 +104,17 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 	protected function initializeAction()
 	{
 		$this->loadSessionData();
- 
-		if( $this->isFinalAction() && !$this->passedMandatoryActions() )
+        
+        if( $this->isFinalAction() && !$this->passedMandatoryActions() )
 		{
 			$this->redirect( $this->firstActionMethodName );
 		}
- 
+        
 		if( $this->formData === NULL )
 		{
-			if( !$this->isFirstAction() ) 
+		    if( !$this->isFirstAction() ) 
 		    {
-				$this->redirect( $this->firstActionMethodName );
+		        $this->redirect( $this->firstActionMethodName );
 			}
 			else
 			{
@@ -123,7 +123,7 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 		}
  
 		$requestArguments = $this->request->getArguments();
- 
+        
 		foreach( $this->arguments->getArgumentNames() as $argumentName )
 		{
 			if( array_key_exists( $argumentName, $requestArguments ) )
@@ -150,7 +150,7 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 	}
  
 	/**
-	 * We use initializeView to determin if a certain action has been reached
+	 * We use initializeView to determine if a certain action has been reached
 	 * and all it's validation has been passed successful.
 	 *
 	 * @return void
@@ -190,9 +190,9 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 	 */
 	protected function passedMandatoryActions()
 	{
-		foreach( $this->mandatoryActionMethodNames as $mandatoryActionMethodeName )
+		foreach( $this->mandatoryActionMethodNames as $mandatoryActionMethodName )
 		{
-			if( $this->passedActionMethodNames[ $mandatoryActionMethodeName ] === NULL )
+			if( empty( $this->passedActionMethodNames[ $mandatoryActionMethodName ] ) )
 			{
 				return FALSE;
 			}
@@ -215,7 +215,8 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 	}
  
 	/**
-	 * Stores data to session. Including formData and passedActionMethodeNames.
+	 * Stores data to session.
+	 * Including formData and passedActionMethodeNames.
 	 *
 	 * @return void
 	 */
@@ -227,7 +228,12 @@ extends         Tx_Extbase_MVC_Controller_ActionController
 		$GLOBALS[ 'TSFE' ]->fe_user->setKey( 'ses', $this->sessionDataStorageKey, $this->sessionData );
 		$GLOBALS[ 'TSFE' ]->fe_user->storeSessionData();
 	}
- 
+    
+    /**
+     * Clear the data stored in the session.
+     *
+     * @return void
+     */
 	protected function clearSessionData()
 	{
 		$this->sessionData = array();
