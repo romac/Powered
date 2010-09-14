@@ -69,8 +69,8 @@ class Tx_Powered_ViewHelpers_Object_CallViewHelper extends Tx_Fluid_Core_ViewHel
      */
     public function render( $object, $method, array $arguments = array() )
     {
-        if( !method_exists( $object, $method ) ) {
-            
+        if( !method_exists( $object, $method ) )
+        {
             throw new Tx_Powered_Exception_NoSuchObjectMethod(
                 'The given object of type "' . get_class( $object ) . '" does ' . 
                 'not have method "' . $method . '()".'

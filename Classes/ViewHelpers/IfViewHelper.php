@@ -69,18 +69,11 @@ class Tx_Powered_ViewHelpers_IfViewHelper extends Tx_Fluid_ViewHelpers_IfViewHel
      */
     public function render( $condition, $invert = FALSE )
     {
-        if( $invert ) {
-            
-            $condition = !$condition;
+        if( ( $invert && !$condition ) || $condition )
+        {
+            return $this->renderThenChild();
         }
         
-        if( $condition ) {
-            
-            return $this->renderThenChild();
-            
-        } else {
-            
-            return $this->renderElseChild();
-        }
+        return $this->renderElseChild();
     }
 }

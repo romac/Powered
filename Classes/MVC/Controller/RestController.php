@@ -66,19 +66,19 @@ abstract class Tx_Powered_MVC_Controller_RestController extends Tx_Extbase_MVC_C
      */
     protected function resolveActionMethodName()
     {
-        switch( $this->request->getMethod() ) {
-            
+        switch( $this->request->getMethod() )
+        {
             case self::METHOD_GET:
                 
-                return self::GET_ACTION_NAME . 'Action';
+                return self::GET_ACTION_NAME    . 'Action';
                 
             case self::METHOD_POST:
                 
-                return self::POST_ACTION_NAME . 'Action';
+                return self::POST_ACTION_NAME   . 'Action';
                 
             case self::METHOD_PUT:
                 
-                return self::PUT_ACTION_NAME . 'Action';
+                return self::PUT_ACTION_NAME    . 'Action';
                 
             case self::METHOD_DELETE:
                 
@@ -93,8 +93,8 @@ abstract class Tx_Powered_MVC_Controller_RestController extends Tx_Extbase_MVC_C
                 );
         }
         
-        if( !method_exists( $this, $actionMethodName ) ) {
-            
+        if( !method_exists( $this, $actionMethodName ) )
+        {
             throw new Tx_Extbase_MVC_Exception_NoSuchAction(
                 'An action "' . $actionMethodName .
                 '" does not exist in controller "' . get_class( $this ) . '".',

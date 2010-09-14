@@ -121,8 +121,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     public function addCacheIdentifier( $cacheIdentifier )
     {
         // Check if the supplied identifier is already registered.
-        if( !in_array( $cacheIdentifier, $this->cacheIdentifiers, true ) ) {
-            
+        if( !in_array( $cacheIdentifier, $this->cacheIdentifiers, TRUE ) )
+        {
             // If not, register it.
             $this->cacheIdentifiers[] = $cacheIdentifier;
         }
@@ -151,8 +151,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     public function clearCache( &$params )
     {
         // We only clear the cache if "Clear all cache" has been selected.
-        if( $params[ 'cacheCmd' ] !== 'all' ) {
-            
+        if( $params[ 'cacheCmd' ] !== 'all' )
+        {
             return false;
         }
         
@@ -160,20 +160,20 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
         $this->buildCacheDirectoriesIndex();
         
         // Holds the state of the process.
-        $status = true;
+        $status = TRUE;
         
         // For each register cache directory.
-        foreach( $this->cacheDirectories as $cacheDirectory ) {
-            
+        foreach( $this->cacheDirectories as $cacheDirectory )
+        {
             // Recursively remove the directory and update success status.
-            $status = $status && ( bool )t3lib_div::rmdir(
+            $status = $status && t3lib_div::rmdir(
                 t3lib_div::getFileAbsFileName( $cacheDirectory ),
-                true
+                TRUE
             );
         }
         
         // Return the status.
-        return ( bool )$status;
+        return $status;
     }
     
     /**
@@ -218,8 +218,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
     protected function getCacheConfiguration( $cacheIdentifier )
     {
         // If the supplied cache identifier is not registered.
-        if( !array_key_exists( $cacheIdentifier, $this->cacheConfigurationsHolder ) ) {
-            
+        if( !array_key_exists( $cacheIdentifier, $this->cacheConfigurationsHolder ) )
+        {
             throw new Tx_Powered_Exception_NoSuchCacheIdentifier(
                 'No cache configuration registered for identifier "' . $cacheIdentifier . '".'
             );
@@ -282,17 +282,19 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
         $this->cacheDirectories = array();
         
         // For each registered cache identifier.
-        foreach( $this->cacheIdentifiers as $cacheIdentifier ) {
-            
+        foreach( $this->cacheIdentifiers as $cacheIdentifier )
+        {
             // Try to get its directory and to add it to the index.
-            try {
-                
+            try
+            {
                 $this->cacheDirectories[] = $this->getCacheDirectory(
                     $cacheIdentifier
                 );
             
             // If it failed, just ignore it.
-            } catch( Tx_Powered_Exception_NoSuchCacheIdentifier $e ) {}
+            }
+            catch( Tx_Powered_Exception_NoSuchCacheIdentifier $e )
+            {}
         }
     }
     
@@ -301,8 +303,8 @@ class Tx_Powered_Utility_CacheProvider implements t3lib_Singleton
 // TODO: Refactor
 
 // If the function 
-if( !function_exists( Tx_Powered_Utility_CacheProvider::CLEAR_CACHE_FUNCTION_NAME ) ) {
-    
+if( !function_exists( Tx_Powered_Utility_CacheProvider::CLEAR_CACHE_FUNCTION_NAME ) )
+{
     function user_txPoweredUtilityCacheProvider_clearCache( &$params )
     {
         return t3lib_div::makeInstance(

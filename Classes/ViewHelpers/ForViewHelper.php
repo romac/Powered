@@ -59,8 +59,8 @@ class Tx_Powered_ViewHelpers_ForViewHelper extends Tx_Fluid_Core_ViewHelper_Abst
     public function render( $each, $as, $key = '' )
     {
         // If the supplied array is empty.
-        if( empty( $each ) ) {
-            
+        if( empty( $each ) )
+        {
             // Return a empty string.
             return '';
         }
@@ -69,14 +69,14 @@ class Tx_Powered_ViewHelpers_ForViewHelper extends Tx_Fluid_Core_ViewHelper_Abst
         $output = '';
         
         // For each item in the supplied array.
-        foreach( $each as $keyValue => $singleElement ) {
-            
+        foreach( $each as $keyValue => $singleElement )
+        {
             // Add its alias to the template variable container.
             $this->templateVariableContainer->add( $as, $singleElement );
             
             // If a key was supplied.
-            if( $key !== '' ) {
-                
+            if( $key !== '' )
+            {
                 // Also add its key to the template variable container.
                 $this->templateVariableContainer->add( $key, $keyValue );
             }
@@ -89,8 +89,8 @@ class Tx_Powered_ViewHelpers_ForViewHelper extends Tx_Fluid_Core_ViewHelper_Abst
             $this->templateVariableContainer->remove( $as );
             
             // If a key was supplied.
-            if( $key !== '' ) {
-                
+            if( $key !== '' )
+            {
                 // Also remove the item key from the template variable container.
                 $this->templateVariableContainer->remove( $key );
             }

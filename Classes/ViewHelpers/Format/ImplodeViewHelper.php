@@ -84,13 +84,13 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
      */
     public function render( $array, $glue = ', ', $property = NULL )
     {
-        if( !is_array( $array ) ) {
-            
+        if( !is_array( $array ) )
+        {
             $array = $this->convertObjectToArray( $array );
         }
         
-        if( is_string( $property ) && !empty( $property ) ) {
-            
+        if( is_string( $property ) && !empty( $property ) )
+        {
             $this->propertyPath      = $property;
             $this->propertyPathParts = explode( '.', $this->propertyPath );
             
@@ -102,8 +102,8 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
     
     protected function getObjectsPropertyAsArray( $objects )
     {
-        foreach( $objects as $key => $object ) {
-            
+        foreach( $objects as $key => $object )
+        {
             $objects[ $key ] = $this->getObjectProperty( $object );
         }
         
@@ -116,8 +116,8 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
         
         reset( $this->propertyPathParts );
         
-        foreach( $this->propertyPathParts as $part ) {
-            
+        foreach( $this->propertyPathParts as $part )
+        {
             $current = Tx_Extbase_Reflection_ObjectAccess::getProperty( $current, $part );
         }
         
@@ -126,13 +126,13 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
     
     protected function convertObjectToArray( $array )
     {
-        if( method_exists( $array, 'toArray' ) ) {
-            
+        if( method_exists( $array, 'toArray' ) )
+        {
             return $array->toArray();
         }
         
-        if( $array instanceof Iterator ) {
-            
+        if( $array instanceof Iterator )
+        {
             return $array;
         }
         

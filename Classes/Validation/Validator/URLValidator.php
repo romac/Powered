@@ -57,8 +57,8 @@ class Tx_Powered_Validation_Validator_URLValidator extends Tx_Extbase_Validation
     {
         $this->errors = array();
         
-        if( $value !== filter_var( $value, FILTER_VALIDATE_URL ) ) {
-            
+        if( $value !== filter_var( $value, FILTER_VALIDATE_URL ) )
+        {
             $this->addError( 'The given subject was not a valid URL.', 1256637565 );
             
             return FALSE;

@@ -57,8 +57,8 @@ class Tx_Powered_ViewHelpers_Format_StripTagsViewHelper extends Tx_Fluid_Core_Vi
         $tags = t3lib_div::trimExplode( ',', $allowedTags );
         $arg  = '';
         
-        foreach( $tags as $tag ) {
-            
+        foreach( $tags as $tag )
+        {
             $arg .= '<' . $tag . '>';
         }
         

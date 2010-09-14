@@ -94,8 +94,8 @@ class Tx_Powered_Helper_RepositoryContainer
     public function __call( $methodName, $arguments )
     {
         // If the invoked method's name does not match against the pattern.
-        if( !preg_match( $this->methodNamePattern, $methodName, $matches ) ) {
-            
+        if( !preg_match( $this->methodNamePattern, $methodName, $matches ) )
+        {
             // Throw a exception.
             throw new BadMethodCallException(
                 'Call to undefined method ' . get_class() . '::' . $methodName . '()'
@@ -118,8 +118,8 @@ class Tx_Powered_Helper_RepositoryContainer
     public function getRepository( $entityName )
     {
         // If there is no already registered repository for the supplied entity's name,
-        if( !isset( $this->repositories[ $entityName ] ) ) {
-            
+        if( !isset( $this->repositories[ $entityName ] ) )
+        {
             // Prepare the replacements.
             // 1. Replace "@extension" with the extension name.
             // 2. Replace "@entity" with the "ucfirsted" entity's name.
@@ -136,8 +136,8 @@ class Tx_Powered_Helper_RepositoryContainer
             );
             
             // If the class is not defined (so it does not exists),
-            if( !class_exists( $repositoryClassName ) ) {
-                
+            if( !class_exists( $repositoryClassName ) )
+            {
                 throw new Tx_Powered_Exception_NoSuchRepository(
                     'The repository "' . $repositoryClassName . '" cannot be found.'
                 );

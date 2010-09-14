@@ -55,8 +55,8 @@ class Tx_Powered_ViewHelpers_DisqusViewHelper extends Tx_Fluid_Core_ViewHelper_A
      */
     public function render( $site, $identifier = '', array $options = array() )
     {
-        if( $identifier ) {
-            
+        if( $identifier )
+        {
             $options[ 'identifier' ] = '\'' . addslashes( $identifier ) . '\'';
         }
         
@@ -97,8 +97,8 @@ class Tx_Powered_ViewHelpers_DisqusViewHelper extends Tx_Fluid_Core_ViewHelper_A
     
     protected function renderOptions( array $options, $prefix = 'disqus_' )
     {
-        if( !$options ) {
-            
+        if( !$options )
+        {
             return '';
         }
         
@@ -107,8 +107,8 @@ class Tx_Powered_ViewHelpers_DisqusViewHelper extends Tx_Fluid_Core_ViewHelper_A
         $content[] = '<script type="text/javascript" charset="utf-8">';
         $content[] = '// <![CDATA[';
         
-        foreach( $options as $label => $value ) {
-            
+        foreach( $options as $label => $value )
+        {
             $content[] = 'var ' . $prefix . $label . ' = ' . $value . ';';
         }
         

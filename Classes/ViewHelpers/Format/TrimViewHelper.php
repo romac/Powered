@@ -54,8 +54,8 @@ class Tx_Powered_ViewHelpers_Format_TrimViewHelper extends Tx_Fluid_Core_ViewHel
      */
     public function render( $charlist = '' )
     {
-        if( $charlist ) {
-            
+        if( $charlist )
+        {
             return trim( $this->renderChildren(), $charlist );
         }
         

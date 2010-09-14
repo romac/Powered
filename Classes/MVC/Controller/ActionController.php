@@ -159,8 +159,8 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
      */
     protected function getLowerCasedExtensionName()
     {
-        if( !$this->lowerCasedExtensionName ) {
-            
+        if( !$this->lowerCasedExtensionName )
+        {
             $this->lowerCasedExtensionName = Tx_Extbase_Utility_Extension::convertCamelCaseToLowerCaseUnderscored(
                 $this->request->getControllerExtensionName()
             );
@@ -184,13 +184,13 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
         $controllerDir  = $this->publicResourcesPath . 'CSS/' . $controller . '/';
         $actionFile     = strtolower( $action ) . '.css';
         
-        if( !is_dir( $controllerDir ) ) {
-            
+        if( !is_dir( $controllerDir ) )
+        {
             return FALSE;
         }
         
-        if( !file_exists( $controllerDir . $actionFile ) ) {
-            
+        if( !file_exists( $controllerDir . $actionFile ) )
+        {
             return FALSE;
         }
         
@@ -218,13 +218,13 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
         $controllerDir  = $this->publicResourcesPath . 'JavaScripts/' . $controller . '/';
         $actionFile     = strtolower( $action ) . '.js';
         
-        if( !is_dir( $controllerDir ) ) {
-            
+        if( !is_dir( $controllerDir ) )
+        {
             return FALSE;
         }
         
-        if( !file_exists( $controllerDir . $actionFile ) ) {
-            
+        if( !file_exists( $controllerDir . $actionFile ) )
+        {
             return FALSE;
         }
         
@@ -248,8 +248,8 @@ abstract class Tx_Powered_MVC_Controller_ActionController extends Tx_Extbase_MVC
     public function __get( $propertyName )
     {
         // If the asked property's name ends with "Repository".
-        if( substr( $propertyName, -10 ) === 'Repository' ) {
-            
+        if( substr( $propertyName, -10 ) === 'Repository' )
+        {
             // Assign a repository to the property.
             $this->$propertyName = $this->repositoryContainer->getRepository(
                 substr( $propertyName, 0, -10 )

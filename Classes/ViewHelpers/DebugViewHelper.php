@@ -57,12 +57,12 @@ class Tx_Powered_ViewHelpers_DebugViewHelper extends Tx_Fluid_Core_ViewHelper_Ab
     {
         ob_start();
         
-        if( class_exists( 'tx_apimacmade' ) ) {
-            
+        if( class_exists( 'tx_apimacmade' ) )
+        {
             tx_apimacmade::debug( $this->renderChildren(), $header );
-            
-        } else {
-            
+        }
+        else
+        {
             t3lib_div::debug( $this->renderChildren(), $header );
         }
         

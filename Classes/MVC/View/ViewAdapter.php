@@ -118,8 +118,8 @@ class Tx_Powered_MVC_View_ViewAdapter implements Tx_Powered_MVC_View_ViewInterfa
     public function &__call( $methodName, array $arguments = array() )
     {
         // Checks for constructor arguments
-        switch( count( $arguments ) ) {
-            
+        switch( count( $arguments ) )
+        {
             case 0:
                 
                 // Return an instance of the class
