@@ -77,6 +77,8 @@ class Tx_Powered_ViewHelpers_Format_ImplodeViewHelper extends Tx_Fluid_Core_View
      * If a property is supplied, the array's values's property's values
      * will be imploded.
      * 
+     * @example <p:format.implode array="{users}" glue=" - " property="lastName" />
+     * @output  Ruetschi - Iannitelli - Wicht - Perseguers
      * @param mixed $array The array to implode
      * @param string $glue The glue to use.
      * @param string $property The property to get on each value.
